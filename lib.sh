@@ -121,7 +121,7 @@ APACHE2=/etc/apache2/apache2.conf
 [ ! -z "$TURN_INSTALL" ] && TURN_PORT=5349
 [ ! -z "$TURN_INSTALL" ] && SHUF=$(shuf -i 25-29 -n 1)
 [ ! -z "$TURN_INSTALL" ] && TURN_SECRET=$(tr -dc "a-zA-Z0-9@#*=" < /dev/urandom | fold -w "$SHUF" | head -n 1)
-[ ! -z "$TURN_INSTALL" ] && TURN_DOMAIN=$(sudo -u www-data /var/www/nextcloud/occ config:system:get overwrite.cli.url | sed 's#https://##;s#/##')
+[ ! -z "$TURN_INSTALL" ] && TURN_DOMAIN=$(sudo -u www-data /var/www/cloud.smart-maas.eu/html/nextcloud/occ config:system:get overwrite.cli.url | sed 's#https://##;s#/##')
 
 ## functions
 
@@ -654,7 +654,7 @@ or experience other issues then please report this to $ISSUES"
     # Do the upgrade
     chown -R www-data:www-data "$NCPATH"
     rm -rf "$NCPATH"/assets
-    yes | sudo -u www-data php /var/www/nextcloud/updater/updater.phar
+    yes | sudo -u www-data php /var/www/cloud.smart-maas.eu/html/nextcloud/updater/updater.phar
     download_static_script setup_secure_permissions_nextcloud -P $SCRIPTS
     bash $SECURE
     occ_command maintenance:mode --off
