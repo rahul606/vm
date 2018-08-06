@@ -7,8 +7,8 @@ true
 
 # Dirs
 SCRIPTS=/var/scripts
-NCPATH=/var/www/nextcloud
-HTML=/var/www
+NCPATH=/var/www/cloud.smart-maas.eu/html/nextcloud
+HTML=/var/www/cloud.smart-maas.eu/html
 NCDATA=/mnt/ncdata
 SNAPDIR=/var/snap/spreedme
 GPGDIR=/tmp/gpg
