@@ -5,7 +5,7 @@
 # shellcheck disable=2034,2059
 true
 # shellcheck source=lib.sh
-TURN_INSTALL=1 . <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+TURN_INSTALL=1 . <(curl -sL https://raw.githubusercontent.com/rahul606/vm/master/lib.sh)
 unset TURN_INSTALL
 
 # Check for errors + debug code and abort if something isn't right
